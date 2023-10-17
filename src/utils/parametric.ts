@@ -16,8 +16,8 @@ export function createOffsetDebugSettings(
     import("dat.gui").then(({ GUI }) => {
       const gui = new GUI();
       const optionsFolder = gui.addFolder("options");
-      optionsFolder.add(options, "uOffset", 0, 2 * Math.PI).onChange(onChange);
-      optionsFolder.add(options, "vOffset", 0, 2 * Math.PI).onChange(onChange);
+      optionsFolder.add(options, "uOffset", 0, 2 * Math.PI, 0.01).onChange(onChange);
+      optionsFolder.add(options, "vOffset", 0, 2 * Math.PI, 0.01).onChange(onChange);
     });
   }
 
